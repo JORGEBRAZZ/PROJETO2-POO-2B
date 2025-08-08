@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.io.*;
 import javax.swing.*;
-import java.awt.*;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.TreeSet;
@@ -242,17 +241,17 @@ class CarrinhoGUI {
 public class Main {
     public static void main(String[] args) {
 
-        Prato p1 = new Prato("Pizza (G) de Calabresa", 40.0, "Molho, Queijo Mussarela, Calabresa e orégano");
-        Prato p2 = new Prato("Pizza (G) de Frango C/ Catupiry", 42.0, "Molho, Queijo Mussarela, Frango e Catupiry");
-        Prato p3 = new Prato("Pizza (P) de Chocolate", 25.0, "Queijo Mussarela e chocolate ao leite.");
+        Prato p1 = new PratoSalgado("Pizza (G) de Calabresa", 40.0, "Molho, Queijo Mussarela, Calabresa e orégano");
+        Prato p2 = new PratoSalgado("Pizza (G) de Frango C/ Catupiry", 42.0, "Molho, Queijo Mussarela, Frango e Catupiry");
+        Prato p3 = new PratoDoce("Pizza (P) de Chocolate", 25.0, "Queijo Mussarela e chocolate ao leite.");
 
-        Prato p4 = new Prato("Carne na Brasa (700g)", 35.0, "Acompanha Arroz, Farofa e Vinagrete");
-        Prato p5 = new Prato("Frango na Brasa (700g)", 30.0, "Acompanha Arroz, Farofa e Vinagrete");
-        Prato p6 = new Prato("Mistão (Serve 3 pessoas)", 60.0, "Carne, Frango e Linguiça acompanhados de Arroz, Farofa, Vinagrete e Pirão de queijo");
+        Prato p4 = new PratoSalgado("Carne na Brasa (700g)", 35.0, "Acompanha Arroz, Farofa e Vinagrete");
+        Prato p5 = new PratoSalgado("Frango na Brasa (700g)", 30.0, "Acompanha Arroz, Farofa e Vinagrete");
+        Prato p6 = new PratoSalgado("Mistão (Serve 3 pessoas)", 60.0, "Carne, Frango e Linguiça acompanhados de Arroz, Farofa, Vinagrete e Pirão de queijo");
 
-        Prato p7 = new Prato("Natal 084", 22.0, "Hambúrguer artesanal, Queijo Mussarela, bacon, cebola caramelizada, salada e molho especial");
-        Prato p8 = new Prato("SGA 084", 20.0, "Frango Cremoso, Queijo Mussarela, Salada, Batata Palha e molho especial");
-        Prato p9 = new Prato("Macaíba 084", 25.0, "Hambúrguer artesanal, Queijo Cheddar, Farofa de Bacon e Geleia de Pimenta");
+        Prato p7 = new PratoSalgado("Natal 084", 22.0, "Hambúrguer artesanal, Queijo Mussarela, bacon, cebola caramelizada, salada e molho especial");
+        Prato p8 = new PratoSalgado("SGA 084", 20.0, "Frango Cremoso, Queijo Mussarela, Salada, Batata Palha e molho especial");
+        Prato p9 = new PratoSalgado("Macaíba 084", 25.0, "Hambúrguer artesanal, Queijo Cheddar, Farofa de Bacon e Geleia de Pimenta");
 
         Restaurante r1 = new Restaurante("Pizzaria 084", "13.267.588/0001-05", p1, p2, p3);
         Restaurante r2 = new Restaurante("Churrascaria 084", "15.190.340/0001-33", p4, p5, p6);
@@ -356,4 +355,5 @@ public class Main {
         }
     }
 }
+
 
